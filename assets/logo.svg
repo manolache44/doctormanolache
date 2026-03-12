@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+  <!-- Coroană regală (auriu) -->
+  <path
+    d="M24 2l2 4h2.8L26 8.2l.8 3.2-3.2-2-3.2 2 .8-3.2-2.8-2H22l2-4z"
+    stroke="#b45309"
+    stroke-width="1.2"
+    fill="none"
+    stroke-linejoin="round"
+  />
+  <!-- Dinte: contur teal, două rădăcini -->
+  <path
+    d="M12 14 C24 10 36 14 L36 23 C37.5 28 39 33 38 38 L24 34.5 L10 38 C11 33 12.5 28 12 23 Z"
+    stroke="#0d9488"
+    stroke-width="1.6"
+    fill="none"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+  />
+  <!-- Model geometric în coroana dintelui -->
+  <path d="M20 16h8M22 19h4M24 14v6M21 17l6 4M21 21l6-4" stroke="#0d9488" stroke-width=".8" stroke-linecap="round" opacity=".8"/>
+</svg>

@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Programare – Dr. Manolache Mihăiță | Sector 6</title>
+    <meta
+      name="description"
+      content="Cere o programare la cabinetul stomatologic Dr. Manolache Mihăiță (Sector 6). Cel mai rapid: sună sau WhatsApp."
+    />
+    <meta property="og:title" content="Programare – Dr. Manolache Mihăiță | Sector 6" />
+    <meta property="og:description" content="Cere programare: sună 0749 307 679 sau WhatsApp. Formular rapid disponibil." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <script src="assets/config.js"></script>
+    <script src="assets/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#continut">Sari la conținut</a>
+
+    <header class="topbar">
+      <div class="container">
+        <div class="row">
+          <a class="brand" href="index.html">
+            <img src="assets/logo.png" alt="" class="brand-logo" />
+            <div class="brand-inner">
+              <strong id="doctorName">Dr. Manolache Mihăiță</strong>
+              <span id="tagline" class="tagline">Stomatologie calmă, explicată. Fără presiune, fără grabă.</span>
+              <span id="addressLine">Bd. Iuliu Maniu 71, Sector 6, București</span>
+            </div>
+          </a>
+
+          <nav class="nav" aria-label="Navigație principală">
+            <a data-nav href="index.html">Acasă</a>
+            <a data-nav href="despre.html">Despre</a>
+            <a data-nav href="servicii.html">Servicii</a>
+            <a data-nav href="dentist-fara-frica.html">Dentist fără frică</a>
+            <a data-nav href="programare.html">Programare</a>
+            <a data-nav href="contact.html">Contact</a>
+          </nav>
+
+          <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end;">
+            <a class="btn small danger" data-phone-link href="tel:+40XXXXXXXXX">
+              Sună: <span id="phoneDisplay">07xx xxx xxx</span>
+            </a>
+            <a class="btn small" data-wa-link href="https://wa.me/40XXXXXXXXX">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="continut">
+      <section class="section">
+        <div class="container">
+          <h1 style="margin:0 0 8px; font-size: clamp(24px, 3vw, 36px); line-height:1.15;">Programare</h1>
+          <p class="lead">
+            Pentru cel mai rapid răspuns, sună direct. Dacă preferi, poți cere programarea și prin formular.
+          </p>
+
+          <div class="ctaRow">
+            <a class="btn primary" data-phone-link href="tel:+40XXXXXXXXX">Sună acum</a>
+            <a class="btn" data-wa-link href="https://wa.me/40XXXXXXXXX">WhatsApp</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="split">
+            <div class="card pane">
+              <h2>Formular (trimite prin e-mail)</h2>
+              <p class="lead">
+                Completarea durează ~30 sec. La trimitere se deschide aplicația ta de e-mail cu mesajul completat.
+              </p>
+
+              <form class="form" id="appointmentForm">
+                <div class="row">
+                  <div>
+                    <label for="name">Nume</label>
+                    <input id="name" name="name" autocomplete="name" required placeholder="Nume și prenume" />
+                  </div>
+                  <div>
+                    <label for="phone">Telefon</label>
+                    <input
+                      id="phone"
+                      name="phone"
+                      autocomplete="tel"
+                      required
+                      placeholder="07xx xxx xxx"
+                      inputmode="tel"
+                    />
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div>
+                    <label for="when">Când preferi</label>
+                    <input id="when" name="when" placeholder="Ex: mâine după 18:00 / sâmbătă dimineața" />
+                  </div>
+                  <div>
+                    <label for="service">Pentru ce</label>
+                    <select id="service" name="service">
+                      <option value="">Alege (opțional)</option>
+                      <option value="Urgenta">Urgență / durere</option>
+                      <option value="Proteze">Proteze dentare</option>
+                      <option value="Igienizare">Igienizare / detartraj</option>
+                      <option value="Plomba">Plombă</option>
+                      <option value="Tratament canal">Tratament de canal</option>
+                      <option value="Coroana/Punte">Coroană / punte</option>
+                      <option value="Dentist fara frica">Dentist fără frică (anxietate)</option>
+                      <option value="Alta">Altceva</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="message">Mesaj</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Ex: durere la molarul stânga jos de 3 zile / proteză care irită / mi-e frică, aș vrea o vizită scurtă."
+                  ></textarea>
+                  <div class="help">
+                    Dacă e urgență, recomandăm să suni: e mai rapid decât e-mailul.
+                  </div>
+                </div>
+
+                <button class="btn primary" type="submit">Trimite cererea</button>
+              </form>
+            </div>
+
+            <div class="card pane">
+              <h2>Cel mai rapid: telefon</h2>
+              <p class="lead">Dacă spui 2 lucruri, e suficient: „ce te doare” + „când poți”.</p>
+
+              <div class="quote">
+                <p style="margin:0 0 6px">
+                  <strong>Telefon:</strong>
+                  <a data-phone-link href="tel:+40XXXXXXXXX"><span id="phoneDisplay2">07xx xxx xxx</span></a>
+                </p>
+                <span>Apasă pe număr (mobil) ca să suni instant.</span>
+              </div>
+
+              <div class="ctaRow" style="margin-top:12px">
+                <a class="btn danger" data-phone-link href="tel:+40XXXXXXXXX">Sună acum</a>
+                <a class="btn" data-wa-link href="https://wa.me/40XXXXXXXXX">WhatsApp</a>
+              </div>
+
+              <div class="feature" style="margin-top:12px">
+                <strong>Ai frică?</strong>
+                <p>Spune asta de la început. Adaptăm ritmul și începem cu pași mici.</p>
+              </div>
+
+              <div class="feature" style="margin-top:10px">
+                <strong>Proteze dentare</strong>
+                <p>Spune dacă e proteză nouă, veche sau te doare/irită. Te ghidăm noi.</p>
+              </div>
+
+              <div style="margin-top:12px">
+                <span class="pill">Adresă: <a data-maps-link href="https://www.google.com/maps?q=44.43364190339959%2C26.013322324435403">Bd. Iuliu Maniu 71</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="cookieBanner" role="dialog" aria-label="Cookies">
+      <div class="cookieBannerWrap">
+        <p>Folosim cookies pentru funcționarea site-ului. <a href="politica-cookies.html">Mai multe</a></p>
+        <button type="button" data-cookie-accept>Accept</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footerCta">
+          <a href="programare.html" class="btn primary">Cere programare</a>
+        </div>
+        <div class="cols">
+          <div>
+            <strong id="doctorName2">Dr. Manolache Mihăiță</strong>
+            <small id="addressLine2">Bd. Iuliu Maniu 71, Sector 6, București</small>
+            <small>
+              <a data-phone-link href="tel:+40XXXXXXXXX">Telefon: <span id="phoneDisplay3">07xx xxx xxx</span></a>
+              • <a data-wa-link href="https://wa.me/40XXXXXXXXX">WhatsApp</a>
+            </small>
+          </div>
+          <div>
+            <strong>Pagini</strong>
+            <small><a href="index.html">Acasă</a></small>
+            <small><a href="servicii.html">Servicii</a></small>
+            <small><a href="dentist-fara-frica.html">Dentist fără frică</a></small>
+            <small><a href="contact.html">Contact</a></small>
+          </div>
+          <div>
+            <strong>Legal</strong>
+            <small><a href="politica-confidentialitate.html">Confidențialitate</a></small>
+            <small><a href="politica-cookies.html">Cookies</a></small>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="mobileActions" aria-label="Acțiuni rapide">
+      <div class="wrap">
+        <a class="btn" href="programare.html">Programare</a>
+        <a class="btn danger" data-phone-link href="tel:+40XXXXXXXXX">Sună</a>
+        <a class="btn primary" data-wa-link href="https://wa.me/40XXXXXXXXX">WhatsApp</a>
+      </div>
+    </div>
+  </body>
+</html>
+
