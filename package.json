@@ -4,7 +4,7 @@
   "description": "Site static (HTML/CSS/JS) în limba română, optimizat pentru mobil și conversie (apel / WhatsApp / programare).",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npx vite build",
     "preview": "vite preview"
   },
   "keywords": [],
