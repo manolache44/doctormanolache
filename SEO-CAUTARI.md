@@ -1,6 +1,8 @@
 # Cum să apară site-ul în căutări (SEO)
 
-Nu se poate garanta „primul loc”, dar următoarele măresc șansele să fii găsit la „stomatolog Sector 6”, „stomatolog București”, „dentist Iuliu Maniu” etc.
+Nu se poate garanta „primul loc”, dar următoarele măresc șansele să fii găsit la „stomatolog Sector 6”, „dentist Iuliu Maniu”, „dinti Militari”, „dentist ieftin Sector 6”, „stomatolog București” etc.
+
+**Important:** Nu ascunde niciodată cuvinte cheie în pagină (text invizibil, font 0, culoare la fel ca fundalul). Google penalizează astfel de practici. Cuvintele trebuie să fie vizibile și integrate natural în textele pentru vizitatori.
 
 ---
 
