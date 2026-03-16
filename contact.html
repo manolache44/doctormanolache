@@ -33,7 +33,10 @@
             </div>
           </a>
 
-          <nav class="nav" aria-label="Navigație principală">
+          <button type="button" class="hamburger" id="hamburgerBtn" aria-label="Deschide meniul" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <nav class="nav" id="mainNav" aria-label="Navigație principală">
             <a data-nav href="index.html">Acasă</a>
             <a data-nav href="despre.html">Despre</a>
             <a data-nav href="servicii.html">Servicii</a>
@@ -42,7 +45,7 @@
             <a data-nav href="contact.html">Contact</a>
           </nav>
 
-          <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end;">
+          <div class="headerActions">
             <a class="btn small danger" data-phone-link href="tel:+40749307679">
               Sună: <span id="phoneDisplay">0749 307 679</span>
             </a>
@@ -140,9 +143,19 @@
     <div id="cookieBanner" role="dialog" aria-label="Cookies">
       <div class="cookieBannerWrap">
         <p>Folosim cookies pentru funcționarea site-ului. <a href="politica-cookies.html">Mai multe</a></p>
-        <button type="button" data-cookie-accept onclick="window.acceptCookies && window.acceptCookies(this)">Accept</button>
+        <button type="button" id="cookieAcceptBtn" data-cookie-accept>Accept</button>
       </div>
     </div>
+    <script>
+(function(){
+  var b=document.getElementById('cookieBanner');
+  var btn=document.getElementById('cookieAcceptBtn');
+  if(!b)return;
+  try{if(localStorage.getItem('cookie-consent')==='1'){b.style.display='none';return;}}catch(e){}
+  function hide(){try{localStorage.setItem('cookie-consent','1');}catch(e){}b.style.display='none';}
+  if(btn)btn.onclick=hide;
+})();
+    </script>
 
     <footer class="footer">
       <div class="container">

@@ -79,6 +79,20 @@ function init() {
 
   setActiveNav();
 
+  // Hamburger meniu mobil
+  const hamburgerBtn = document.getElementById("hamburgerBtn");
+  const mainNav = document.getElementById("mainNav");
+  const topbar = document.querySelector(".topbar");
+  if (hamburgerBtn && topbar) {
+    hamburgerBtn.addEventListener("click", () => {
+      topbar.classList.toggle("menuOpen");
+      hamburgerBtn.setAttribute("aria-expanded", topbar.classList.contains("menuOpen"));
+    });
+    mainNav && mainNav.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => topbar.classList.remove("menuOpen"));
+    });
+  }
+
   // Open Graph: completează og:url și og:image (pentru partajare pe Facebook/WhatsApp)
   const base = (cfg.SITE_URL || location.origin).replace(/\/$/, "");
   const path = location.pathname || "/index.html";
