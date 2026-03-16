@@ -334,7 +334,6 @@ input:focus,select:focus,textarea:focus{border-color: rgba(74,163,255,.55);box-s
   .testimonialsSection .testimonialsGrid{grid-template-columns: 1fr}
 }
 @media (max-width: 560px){
-  .nav{display:none}
   .hero{padding-top:18px}
   .services{grid-template-columns: 1fr}
   .form .row{grid-template-columns: 1fr}
