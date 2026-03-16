@@ -135,5 +135,21 @@
         <a class="btn primary" data-wa-link href="https://wa.me/40749307679">WhatsApp</a>
       </div>
     </div>
+    <script>
+(function(){
+  var btn=document.getElementById('hamburgerBtn');
+  var topbar=document.querySelector('.topbar');
+  if(btn&&topbar){
+    btn.addEventListener('click',function(){
+      topbar.classList.toggle('menuOpen');
+      btn.setAttribute('aria-expanded',topbar.classList.contains('menuOpen'));
+    });
+    var nav=document.getElementById('mainNav');
+    if(nav) nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){topbar.classList.remove('menuOpen');});
+    });
+  }
+})();
+    </script>
   </body>
 </html>
