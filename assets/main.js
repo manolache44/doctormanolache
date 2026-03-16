@@ -29,6 +29,20 @@ function buildWhatsAppLink(e164) {
   return "https://wa.me/" + digits;
 }
 
+// expus global pentru fallback din HTML (onclick)
+window.acceptCookies = function (sourceEl) {
+  const banner =
+    document.getElementById("cookieBanner") ||
+    (sourceEl && sourceEl.closest && sourceEl.closest("#cookieBanner"));
+  if (!banner) return;
+  try {
+    localStorage.setItem("cookie-consent", "1");
+  } catch (e) {
+    // ignore storage errors
+  }
+  banner.style.display = "none";
+};
+
 function init() {
   const cfg = getConfig();
 
@@ -89,14 +103,7 @@ function init() {
       } else {
         showBanner();
         if (btn) {
-          btn.addEventListener("click", () => {
-            try {
-              localStorage.setItem("cookie-consent", "1");
-            } catch (e) {
-              // dacă localStorage nu e disponibil, doar ascundem bannerul
-            }
-            hideBanner();
-          });
+          btn.addEventListener("click", () => window.acceptCookies(btn));
         }
       }
     } catch (e) {
@@ -104,7 +111,7 @@ function init() {
       // lăsăm bannerul să poată fi închis în sesiunea curentă
       showBanner();
       if (btn) {
-        btn.addEventListener("click", hideBanner);
+        btn.addEventListener("click", () => window.acceptCookies(btn));
       }
     }
   }
