@@ -81,16 +81,30 @@ function init() {
       cookieBanner.style.display = "block";
     };
 
-    if (localStorage.getItem("cookie-consent") === "1") {
-      hideBanner();
-    } else {
+    const btn = cookieBanner.querySelector('[data-cookie-accept]');
+
+    try {
+      if (localStorage.getItem("cookie-consent") === "1") {
+        hideBanner();
+      } else {
+        showBanner();
+        if (btn) {
+          btn.addEventListener("click", () => {
+            try {
+              localStorage.setItem("cookie-consent", "1");
+            } catch (e) {
+              // dacă localStorage nu e disponibil, doar ascundem bannerul
+            }
+            hideBanner();
+          });
+        }
+      }
+    } catch (e) {
+      // dacă localStorage nu e disponibil (mod privat, blocat etc.),
+      // lăsăm bannerul să poată fi închis în sesiunea curentă
       showBanner();
-      const btn = cookieBanner.querySelector('[data-cookie-accept]');
       if (btn) {
-        btn.addEventListener("click", () => {
-          localStorage.setItem("cookie-consent", "1");
-          hideBanner();
-        });
+        btn.addEventListener("click", hideBanner);
       }
     }
   }
