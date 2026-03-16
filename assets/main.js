@@ -74,15 +74,22 @@ function init() {
   // Banner cookies
   const cookieBanner = document.getElementById("cookieBanner");
   if (cookieBanner) {
+    const hideBanner = () => {
+      cookieBanner.style.display = "none";
+    };
+    const showBanner = () => {
+      cookieBanner.style.display = "block";
+    };
+
     if (localStorage.getItem("cookie-consent") === "1") {
-      cookieBanner.hidden = true;
+      hideBanner();
     } else {
-      cookieBanner.hidden = false;
+      showBanner();
       const btn = cookieBanner.querySelector('[data-cookie-accept]');
       if (btn) {
         btn.addEventListener("click", () => {
           localStorage.setItem("cookie-consent", "1");
-          cookieBanner.hidden = true;
+          hideBanner();
         });
       }
     }
